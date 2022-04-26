@@ -1,0 +1,24 @@
+name: pps-ci-lab test
+
+on:
+  pull_request:
+    branches:
+    - master
+    - main
+    - develop
+  push:
+    branches:
+    - master
+    - main
+    - develop
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - run: ./gradlew clean build
