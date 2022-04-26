@@ -1,3 +1,8 @@
-plugins {
+plugins{
     java
+    application
+}
+
+repositories {
+    mavenCentral()
 }

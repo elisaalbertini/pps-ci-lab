@@ -13,7 +13,6 @@ on:
     release: 
       types:
         - created 
-
 jobs:
   Build: # Job name
     runs-on: ubuntu-latest # Operating system selection
@@ -29,4 +28,3 @@ jobs:
 
       - name: Build
         run: ./gradlew check
-
