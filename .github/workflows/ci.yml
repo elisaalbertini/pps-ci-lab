@@ -1,9 +1,8 @@
 name: Clone Repository
+
 on:
-  push:
-    branches:
-      - develop
-      - master
+  push: # On every push on any branch
+
 jobs:
   Build: # Job name
     runs-on: ubuntu-latest # Operating system selection
@@ -16,4 +15,4 @@ jobs:
         with: # Actions parameters (action name omitted)
           java-version: 15
       - name: Build
-        run: ./gradlew build
+        run: ./gradlew check
